@@ -1,0 +1,23 @@
+#!/bin/python3
+
+def time_delta(t1, t2):
+    import datetime
+    dt1 = dt.strptime(t1,"%a %d %b %Y %H:%M:%S %z")
+    dt2 = dt.strptime(t2,"%a %d %b %Y %H:%M:%S %z")
+    return int(abs(dt1-dt2).total_seconds())
+
+if __name__ == '__main__':
+
+        
+    t = int(input('No. of inputs: '))
+
+    
+    for t_itr in range(t):
+        t1 = input('First date&time: ')
+
+        t2 = input('Second date&time: ')
+
+        delta = time_delta(t1, t2)
+        
+        print('Difference in seconds: ',delta)
+    
